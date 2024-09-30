@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="/"><img class="navbar-brand" src="logo-new-clinica.png" alt="HomePage"></a>
+      <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#acerca-de">Acerca de</a></li>
+            <li><a href="#especialidades">Especialidades</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+        <a class="reserva-btn" href="#reserva">Reserva de cita</a>
+    </nav>
+</header>
+    <div class="container">
+        <h1>ENVÍANOS TU MENSAJE</h1>
+        <p>Los campos con asterisco (<span class="asterisk">*</span>) son obligatorios.</p>
+        
+        <form action="/submit" method="post">
+            <label for="nombre">Nombre Completo<span class="asterisk">*</span>:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="correo">Correo Electrónico<span class="asterisk">*</span>:</label>
+            <input type="email" id="correo" name="correo" required>
+
+            <label for="asunto">Asunto:</label>
+            <input type="text" id="asunto" name="asunto">
+
+            <label for="mensaje">Su Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="5" cols="30"></textarea>
+
+            <input type="submit" value="Enviar">
+        </form>
+
+        <div class="footer">
+            <p>&copy; 2024 Clínica Universitaria. Todos los derechos reservados.</p>
+        </div>
+    </div>
+    <style>
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #00928f;
+            margin-bottom: 20px;
+        }
+
+        p {
+            text-align: center;
+            color: #555;
+        }
+
+        label {
+            display: block;
+            margin: 15px 0 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+            border-color: #2a9d8f;
+            outline: none;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background-color: #00928F;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #092F3D;
+        }
+
+        .asterisk {
+            color: red;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #888;
+        }
+    </style>
+</body>
+</html>
